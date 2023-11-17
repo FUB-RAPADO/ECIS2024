@@ -5,7 +5,7 @@ import math
 import itertools
 
 # Total countries in world
-total_countries = 195
+total_countries = 193
 
 
 # ==========================================
@@ -37,7 +37,7 @@ def normalize_geographical_diversity_index(geo_list):
 
     # Generate best and worst case for available nodes
     best_case_list = [even+1 if i < sum(geo_list) % total_countries else even for i in range(0, total_countries)]
-    worst_case_list = list(itertools.repeat(0, 195))
+    worst_case_list = list(itertools.repeat(0, 193))
     worst_case_list[0] = sum(geo_list)
     geo_list = geo_list + list(itertools.repeat(0, total_countries - len(geo_list)))
 
